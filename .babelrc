@@ -6,9 +6,12 @@
         "root": ["./"],
         "alias": {
           "underscore": "lodash",
-          "@reactioncommerce/reaction-ui": "./imports/plugins/core/ui/lib",
+          "@reactioncommerce/reaction-ui": "./imports/plugins/core/ui",
           "@reactioncommerce/reaction-router": "./imports/plugins/core/router/lib",
           "@reactioncommerce/reaction-core": "./imports/plugins/core/core",
+          "@reactioncommerce/reaction-logger": "./imports/plugins/core/logger",
+          "@reactioncommerce/reaction-collections": "./imports/plugins/core/collections",
+          "@reactioncommerce/reaction-i18n": "./imports/plugins/core/i18n/lib",
           "/imports/plugins/core/client/components": "./imports/plugins/core/ui/lib"
         }
       }]

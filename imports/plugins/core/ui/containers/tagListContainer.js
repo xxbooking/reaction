@@ -2,12 +2,13 @@ import React, { Component, PropTypes } from "react";
 import debounce from "lodash/debounce";
 import update from "react/lib/update";
 import { Meteor } from "meteor/meteor";
-import { Reaction, i18next } from "/client/api";
+import { Reaction } from "@reactioncommerce/reaction-core";
+import { i18next } from "@reactioncommerce/reaction-i18n";
 import { composeWithTracker } from "/lib/api/compose";
 import { TagList } from "../components/tags";
 import { Tags } from "/lib/collections";
 import { getTagIds } from "/lib/selectors/tags";
-import { DragDropProvider } from "/imports/plugins/core/ui/client/providers";
+import { DragDropProvider } from "@reactioncommerce/reaction-ui/providers";
 
 
 function updateSuggestions(term, { excludeTags }) {

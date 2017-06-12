@@ -5,11 +5,11 @@ import { check } from "meteor/check";
 import { Tracker } from "meteor/tracker";
 import { ReactiveVar } from "meteor/reactive-var";
 import { ReactiveDict } from "meteor/reactive-dict";
-import Logger from "/client/modules/logger";
-import { Countries } from "/client/collections";
-import { localeDep } from  "/client/modules/i18n";
+import Logger from "@reactioncommerce/reaction-logger";
+import { Countries } from "@reactioncommerce/reaction-collections";
+import { localeDep } from  "@reactioncommerce/reaction-i18n";
 import { Packages, Shops } from "/lib/collections";
-import { Router } from "/client/modules/router";
+import { Router } from "@reactioncommerce/reaction-router";
 
 // Global, private state object for client side
 // This is placed outside the main object to make it a private variable.
