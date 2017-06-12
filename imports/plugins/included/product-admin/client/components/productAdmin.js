@@ -11,7 +11,7 @@ import {
   TextField,
   Translation,
   Select
-} from "/imports/plugins/core/ui/client/components";
+} from "/imports/plugins/core/ui/components";
 import { Router } from "/client/api";
 import { TagListContainer } from "/imports/plugins/core/ui/client/containers";
 import update from "react/lib/update";

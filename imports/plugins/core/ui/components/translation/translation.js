@@ -1,6 +1,12 @@
 import { camelCase } from "lodash";
 import React, { Component, PropTypes } from "react";
-import { i18next } from "/client/api";
+// import { i18next } from "/client/api";
+
+const i18next = {
+  t: (key, options = {}) => {
+    return options.defaultValue || key;
+  }
+};
 
 class Translation extends Component {
   render() {

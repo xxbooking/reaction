@@ -1,5 +1,5 @@
 import MeteorGriddle from "/imports/plugins/core/ui-grid/client/griddle";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import { Meteor } from "meteor/meteor";
 import { AutoForm } from "meteor/aldeed:autoform";
 import { Blaze } from "meteor/blaze";

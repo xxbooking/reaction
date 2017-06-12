@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { formatPriceString } from "/client/api";
-import { Translation } from "/imports/plugins/core/ui/client/components";
+import { Translation } from "/imports/plugins/core/ui/components";
 
 class LineItems extends Component {
 

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Button } from "/imports/plugins/core/ui/client/components";
+import { Button } from "/imports/plugins/core/ui/components";
 
 class CartPanel extends Component {
   render() {

@@ -7,7 +7,7 @@ import {
   Switch,
   Icon,
   VerticalDivider
-} from "/imports/plugins/core/ui/client/components";
+} from "/imports/plugins/core/ui/components";
 import { Translatable } from "/imports/plugins/core/ui/client/providers";
 import { Reaction } from "/client/api";
 

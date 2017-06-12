@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react";
 import { composeWithTracker } from "/lib/api/compose";
 import TotalActions from "../components/totalActions";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 
 class TotalActionsContaner extends Component {
 

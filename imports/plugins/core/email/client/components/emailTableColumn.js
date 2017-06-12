@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import moment from "moment";
-import { Icon } from "/imports/plugins/core/ui/client/components";
+import { Icon } from "/imports/plugins/core/ui/components";
 import { i18next } from "/client/api";
 
 class EmailTableColumn extends Component {

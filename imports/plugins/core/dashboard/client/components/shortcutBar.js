@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { map } from "lodash";
-import { FlatButton, Icon } from "/imports/plugins/core/ui/client/components";
+import { FlatButton, Icon } from "/imports/plugins/core/ui/components";
 import { isEqual } from "lodash";
 
 class ShortcutBar extends Component {

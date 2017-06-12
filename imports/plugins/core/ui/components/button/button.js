@@ -2,7 +2,7 @@ import _ from "lodash";
 import Tooltip from "tether-tooltip";
 import { Template }  from "meteor/templating";
 import { i18next, i18nextDep } from "/client/api";
-import { Icon } from "/imports/plugins/core/ui/client/components";
+import { Icon } from "/imports/plugins/core/ui/components";
 
 Template.button.onRendered(function () {
   const buttonElement = this.$("button, a")[0];

@@ -1,5 +1,5 @@
 import React from "react";
-import { Currency } from "/imports/plugins/core/ui/client/components/";
+import { Currency } from "/imports/plugins/core/ui/components/";
 
 const PriceRange = (props) => {
   return (

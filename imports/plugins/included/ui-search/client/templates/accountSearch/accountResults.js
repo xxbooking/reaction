@@ -2,7 +2,7 @@ import React from "react";
 import { DataType } from "react-taco-table";
 import { Template } from "meteor/templating";
 import { Reaction, i18next } from "/client/api";
-import { SortableTable } from "/imports/plugins/core/ui/client/components";
+import { SortableTable } from "/imports/plugins/core/ui/components";
 
 function userPermissions(userId) {
   if (Reaction.hasPermission("reaction-accounts")) {

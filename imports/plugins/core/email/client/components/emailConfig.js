@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import "./emailConfig.css";
-import { Card, CardHeader, CardBody, CardGroup, Icon, Translation } from "/imports/plugins/core/ui/client/components";
+import { Card, CardHeader, CardBody, CardGroup, Icon, Translation } from "/imports/plugins/core/ui/components";
 import EmailSettings from "../containers/emailSettings";
 
 

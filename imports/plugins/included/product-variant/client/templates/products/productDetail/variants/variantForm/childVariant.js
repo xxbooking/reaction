@@ -1,7 +1,7 @@
 import { Reaction, i18next } from "/client/api";
 import { ReactionProduct } from "/lib/api";
 import { Media } from "/lib/collections";
-import { Icon } from "/imports/plugins/core/ui/client/components";
+import { Icon } from "/imports/plugins/core/ui/components";
 
 function productHandle() {
   const selectedProduct = ReactionProduct.selectedProduct();

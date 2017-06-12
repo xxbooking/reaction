@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Currency, Translation } from "/imports/plugins/core/ui/client/components/";
+import { Currency, Translation } from "/imports/plugins/core/ui/components/";
 
 class CartSubTotal extends Component {
   static propTypes = {

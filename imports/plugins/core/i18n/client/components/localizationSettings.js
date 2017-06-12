@@ -7,7 +7,7 @@ import {
   List,
   ListItem,
   SettingsCard
-} from "/imports/plugins/core/ui/client/components";
+} from "/imports/plugins/core/ui/components";
 
 import { Shop as ShopSchema } from "/lib/collections/schemas/shops";
 

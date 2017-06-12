@@ -15,7 +15,7 @@ import {
   SettingsCard,
   Switch,
   TextField
-} from "/imports/plugins/core/ui/client/components";
+} from "/imports/plugins/core/ui/components";
 
 const fieldNames = [
   "title",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Translation } from "/imports/plugins/core/ui/client/components";
+import { Translation } from "/imports/plugins/core/ui/components";
 import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
 
 const ProductNotFound = () => {

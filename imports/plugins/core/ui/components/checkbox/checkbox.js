@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Translation } from "/imports/plugins/core/ui/client/components";
+import { Translation } from "/imports/plugins/core/ui/components";
 
 class Checkbox extends Component {
   handleChange = (event) => {

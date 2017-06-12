@@ -5,7 +5,7 @@ import { Meteor } from "meteor/meteor";
 import { composeWithTracker } from "/lib/api/compose";
 import { Orders } from "/lib/collections";
 import { i18next } from "/client/api";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import OrderSummary from "../components/orderSummary";
 
 class OrderSummaryContainer extends Component {

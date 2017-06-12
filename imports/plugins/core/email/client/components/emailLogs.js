@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Card, CardHeader, CardBody, CardGroup, Loading } from "/imports/plugins/core/ui/client/components";
+import { Card, CardHeader, CardBody, CardGroup, Loading } from "/imports/plugins/core/ui/components";
 import MeteorGriddle from "/imports/plugins/core/ui-grid/client/griddle";
 import EmailTableColumn from "./emailTableColumn";
 import { Jobs } from "/lib/collections";

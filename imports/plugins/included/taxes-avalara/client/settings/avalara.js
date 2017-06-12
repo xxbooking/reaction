@@ -9,7 +9,7 @@ import { Packages, Logs } from "/lib/collections";
 import { Logs as LogSchema } from "/lib/collections/schemas/logs";
 import { AvalaraPackageConfig } from "../../lib/collections/schemas";
 import LogGriddle from "./avagriddle";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 
 
 function getPackageData() {

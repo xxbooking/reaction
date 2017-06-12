@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import _ from "lodash";
-import { TextField, Translation, Checkbox } from "/imports/plugins/core/ui/client/components";
+import { TextField, Translation, Checkbox } from "/imports/plugins/core/ui/components";
 
 class ExampleSettingsForm extends Component {
   constructor(props) {

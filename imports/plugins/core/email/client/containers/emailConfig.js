@@ -2,7 +2,7 @@ import { useDeps } from "react-simple-di";
 import getServiceConfig from "nodemailer-wellknown";
 import { Meteor } from "meteor/meteor";
 import { Reaction } from "/client/api";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import actions from "../actions";
 import EmailConfig from "../components/emailConfig";
 import { composeWithTracker, merge } from "/lib/api/compose";

@@ -1,7 +1,7 @@
 import { composeWithTracker, merge } from "/lib/api/compose";
 import { useDeps } from "react-simple-di";
 import { Meteor } from "meteor/meteor";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import { Sms } from "/lib/collections";
 import actions from "../actions";
 import SmsSettings from "../components/smsSettings";

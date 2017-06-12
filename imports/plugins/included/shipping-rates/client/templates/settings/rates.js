@@ -4,7 +4,7 @@ import { AutoForm } from "meteor/aldeed:autoform";
 import { Shipping } from "/lib/collections";
 import { i18next } from "/client/api";
 import MeteorGriddle from "/imports/plugins/core/ui-grid/client/griddle";
-import { IconButton, Loading } from "/imports/plugins/core/ui/client/components";
+import { IconButton, Loading } from "/imports/plugins/core/ui/components";
 
 Template.shippingRatesSettings.onCreated(function () {
   this.autorun(() => {

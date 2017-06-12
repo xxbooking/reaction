@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react";
 import Helmet from "react-helmet";
 import classnames from "classnames";
-import { Translation } from "/imports/plugins/core/ui/client/components";
+import { Translation } from "/imports/plugins/core/ui/components";
 
 
 export function getGooglePlusMeta(props) {

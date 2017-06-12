@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { map } from "lodash";
-import { Card, CardHeader, CardBody, CardGroup, ListItem } from "/imports/plugins/core/ui/client/components";
+import { Card, CardHeader, CardBody, CardGroup, ListItem } from "/imports/plugins/core/ui/components";
 import { getComponent } from "/imports/plugins/core/layout/lib/components";
 
 class PackageList extends Component {

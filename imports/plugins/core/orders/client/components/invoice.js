@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { formatPriceString } from "/client/api";
-import { Translation } from "/imports/plugins/core/ui/client/components";
+import { Translation } from "/imports/plugins/core/ui/components";
 import DiscountList from "/imports/plugins/core/discounts/client/components/list";
 
 class Invoice extends Component {

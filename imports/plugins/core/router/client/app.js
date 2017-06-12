@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import { Reaction, Router } from "/client/api";
 import { composeWithTracker } from "/lib/api/compose";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import ToolbarContainer from "/imports/plugins/core/dashboard/client/containers/toolbarContainer";
 import Toolbar from "/imports/plugins/core/dashboard/client/components/toolbar";
 import { ActionViewContainer, PackageListContainer } from "/imports/plugins/core/dashboard/client/containers";

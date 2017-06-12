@@ -1,7 +1,7 @@
 import { Session } from "meteor/session";
 import { Template } from "meteor/templating";
 import { ReactiveDict } from "meteor/reactive-dict";
-import { IconButton } from "/imports/plugins/core/ui/client/components";
+import { IconButton } from "/imports/plugins/core/ui/components";
 
 Template.gridControls.onCreated(function () {
   this.state = new ReactiveDict();

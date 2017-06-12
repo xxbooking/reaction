@@ -1,28 +1,28 @@
 import React, { Component, PropTypes } from "react";
-import Velocity from "velocity-animate";
-import "velocity-animate/velocity.ui";
+// import Velocity from "velocity-animate";
+// import "velocity-animate/velocity.ui";
 import { TextField, Button } from "../";
 
 class Metafield extends Component {
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.metafield.key !== this.props.metafield.key) {
-      const input = this.refs.keyInput.refs.input;
-
-      Velocity.RunSequence([
-        { e: input, p: { backgroundColor: "#e2f2e2" }, o: { duration: 200 } },
-        { e: input, p: { backgroundColor: "#fff" }, o: { duration: 100 } }
-      ]);
-    }
-
-    if (nextProps.metafield.value !== this.props.metafield.value) {
-      const input = this.refs.valueInput.refs.input;
-
-      Velocity.RunSequence([
-        { e: input, p: { backgroundColor: "#e2f2e2" }, o: { duration: 200 } },
-        { e: input, p: { backgroundColor: "#fff" }, o: { duration: 100 } }
-      ]);
-    }
+    // if (nextProps.metafield.key !== this.props.metafield.key) {
+    //   const input = this.refs.keyInput.refs.input;
+    //
+    //   Velocity.RunSequence([
+    //     { e: input, p: { backgroundColor: "#e2f2e2" }, o: { duration: 200 } },
+    //     { e: input, p: { backgroundColor: "#fff" }, o: { duration: 100 } }
+    //   ]);
+    // }
+    //
+    // if (nextProps.metafield.value !== this.props.metafield.value) {
+    //   const input = this.refs.valueInput.refs.input;
+    //
+    //   Velocity.RunSequence([
+    //     { e: input, p: { backgroundColor: "#e2f2e2" }, o: { duration: 200 } },
+    //     { e: input, p: { backgroundColor: "#fff" }, o: { duration: 100 } }
+    //   ]);
+    // }
   }
 
   get detailNamePlaceholder() {

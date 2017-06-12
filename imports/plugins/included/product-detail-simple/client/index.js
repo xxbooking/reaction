@@ -13,7 +13,7 @@ import {
 
 import {
   Divider
-} from "/imports/plugins/core/ui/client/components";
+} from "/imports/plugins/core/ui/components";
 
 import {
   SocialContainer,

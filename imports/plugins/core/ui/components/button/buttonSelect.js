@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import Button from "./button.jsx";
-import { Translation } from "/imports/plugins/core/ui/client/components";
+import { Translation } from "/imports/plugins/core/ui/components";
 
 class ButtonSelect extends Component {
   static PropTypes = {

@@ -5,7 +5,7 @@ import { DiscountCodes } from "../collections/codes";
 import { i18next } from "/client/api";
 import { DiscountCodes as DiscountSchema } from "../../lib/collections/schemas";
 import MeteorGriddle from "/imports/plugins/core/ui-grid/client/griddle";
-import { IconButton, Loading }  from "/imports/plugins/core/ui/client/components";
+import { IconButton, Loading }  from "/imports/plugins/core/ui/components";
 import "./settings.html";
 
 /* eslint no-shadow: ["error", { "allow": ["options"] }] */

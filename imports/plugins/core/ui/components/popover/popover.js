@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import TetherComponent from "react-tether";
 import PopoverContent from "./popoverContent";
-import { Button, ButtonGroup } from "/imports/plugins/core/ui/client/components/";
+import { Button, ButtonGroup } from "/imports/plugins/core/ui/components/";
 
 class Popover extends Component {
   state = {

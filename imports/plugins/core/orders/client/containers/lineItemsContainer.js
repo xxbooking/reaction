@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import { Meteor } from "meteor/meteor";
 import { composeWithTracker } from "/lib/api/compose";
 import { Media } from "/lib/collections";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
 import LineItems from "../components/lineItems.js";
 

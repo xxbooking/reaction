@@ -2,7 +2,7 @@ import { useDeps } from "react-simple-di";
 import { Meteor } from "meteor/meteor";
 import actions from "../actions";
 import EmailLogs from "../components/emailLogs";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import { Jobs } from "/lib/collections";
 import { composeWithTracker, merge } from "/lib/api/compose";
 

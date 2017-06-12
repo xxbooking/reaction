@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import Velocity from "velocity-animate";
 import "velocity-animate/velocity.ui";
-import { TextField } from "/imports/plugins/core/ui/client/components/";
+import { TextField } from "/imports/plugins/core/ui/components/";
 import { EditContainer } from "/imports/plugins/core/ui/client/containers";
 
 class ProductField extends Component {

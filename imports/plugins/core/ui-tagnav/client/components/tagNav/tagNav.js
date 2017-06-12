@@ -3,7 +3,7 @@ import { Template } from "meteor/templating";
 import { ReactiveDict } from "meteor/reactive-dict";
 import { Reaction } from "/client/api";
 import { TagHelpers } from "/imports/plugins/core/ui-tagnav/client/helpers";
-import { IconButton, Overlay } from "/imports/plugins/core/ui/client/components";
+import { IconButton, Overlay } from "/imports/plugins/core/ui/components";
 
 const NavbarStates = {
   Orientation: "stateNavbarOrientation",

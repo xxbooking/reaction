@@ -1,5 +1,8 @@
 import React, { Component, PropTypes, Children } from "react"; // eslint-disable-line
-import { formatPriceString } from "/client/api";
+// import { formatPriceString } from "/client/api";
+function formatPriceString(amount) {
+  return amount;
+}
 
 class Currency extends Component {
   render() {

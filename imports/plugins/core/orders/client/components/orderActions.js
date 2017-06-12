@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import Radium from "radium";
-import { TabList, TabItem } from "/imports/plugins/core/ui/client/components";
+import { TabList, TabItem } from "/imports/plugins/core/ui/components";
 
 const styles = {
   list: {

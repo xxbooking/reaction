@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Alert, Translation } from "/imports/plugins/core/ui/client/components";
+import { Alert, Translation } from "/imports/plugins/core/ui/components";
 
 
 class AddToCartButton extends Component {

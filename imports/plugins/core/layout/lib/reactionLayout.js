@@ -5,7 +5,7 @@ import { Reaction } from "/client/api";
 import classnames from "classnames";
 import { getComponent } from "/imports/plugins/core/layout/lib/components";
 import { Templates } from "/lib/collections";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 
 class ReactionLayout extends Component {
 

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Button, Select, TextField } from "/imports/plugins/core/ui/client/components";
+import { Button, Select, TextField } from "/imports/plugins/core/ui/components";
 
 class EmailSettings extends Component {
   constructor(props) {

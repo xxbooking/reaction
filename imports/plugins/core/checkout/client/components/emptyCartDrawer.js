@@ -1,5 +1,5 @@
 import React, { PropTypes } from "react";
-import { Button, Translation } from "/imports/plugins/core/ui/client/components";
+import { Button, Translation } from "/imports/plugins/core/ui/components";
 
 
 const EmptyCartDrawer = ({ keepShopping }) => {

@@ -1,6 +1,6 @@
 import { Reaction } from "/client/api";
 import { ReactionProduct } from "/lib/api";
-import { EditButton, VisibilityButton } from "/imports/plugins/core/ui/client/components";
+import { EditButton, VisibilityButton } from "/imports/plugins/core/ui/components";
 import { Session } from "meteor/session";
 import { Template } from "meteor/templating";
 

@@ -11,7 +11,7 @@ import {
   IconButton,
   Translation,
   Overlay
-} from "/imports/plugins/core/ui/client/components";
+} from "/imports/plugins/core/ui/components";
 import { getComponent } from "/imports/plugins/core/layout/lib/components";
 
 

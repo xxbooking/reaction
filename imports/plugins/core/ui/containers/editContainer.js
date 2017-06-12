@@ -1,6 +1,6 @@
 import React, { Children, Component, PropTypes } from "react";
-import { Reaction } from "/client/api";
-import { EditButton, VisibilityButton, Translation } from "/imports/plugins/core/ui/client/components";
+import { Reaction } from "@reactioncommerce/reaction-core";
+import { EditButton, VisibilityButton, Translation } from "/imports/plugins/core/ui/components";
 import { composeWithTracker } from "/lib/api/compose";
 
 const styles = {

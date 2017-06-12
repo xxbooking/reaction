@@ -2,7 +2,13 @@ import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import TextareaAutosize from "react-textarea-autosize";
 import { Translation } from "../translation";
-import { i18next } from "/client/api";
+// import { i18next } from "/client/api";
+
+const i18next = {
+  t: (key, options = {}) => {
+    return options.defaultValue || key;
+  }
+};
 
 class TextField extends Component {
   /**

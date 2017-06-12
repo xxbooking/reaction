@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Cart } from "/lib/collections";
 import { composeWithTracker } from "/lib/api/compose";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import CartSubTotal from "../components/cartSubTotal";
 
 class CartSubTotalContainer extends Component {

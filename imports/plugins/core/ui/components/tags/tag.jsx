@@ -1,32 +1,37 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import Autosuggest from "react-autosuggest";
-import Velocity from "velocity-animate";
-import "velocity-animate/velocity.ui";
-import { Router } from "/client/api";
-import { i18next } from "/client/api";
-import { Button, Handle } from "/imports/plugins/core/ui/client/components";
+// import Velocity from "velocity-animate";
+// import "velocity-animate/velocity.ui";
+import { Router } from "@reactioncommerce/reaction-router";
+// import { i18next } from "/client/api";
+import { Button, Handle } from "/imports/plugins/core/ui/components";
 import { SortableItem } from "../../containers";
 
+const i18next = {
+  t: (key, options = {}) => {
+    return options.defaultValue || key;
+  }
+};
 
 class Tag extends Component {
   displayName: "Tag";
 
   componentWillReceiveProps(nextProps) {
-    if (this._updated && this._saved && this.refs.autoSuggestInput) {
-      const input = this.refs.autoSuggestInput.input;
-
-      Velocity.RunSequence([
-        { e: input, p: { backgroundColor: "#e2f2e2" }, o: { duration: 200 } },
-        { e: input, p: { backgroundColor: "#fff" }, o: { duration: 100 } }
-      ]);
-
-      this._updated = false;
-    }
-
-    if ((nextProps.tag.name !== this.props.tag.name)) {
-      this._updated = true;
-    }
+    // if (this._updated && this._saved && this.refs.autoSuggestInput) {
+    //   const input = this.refs.autoSuggestInput.input;
+    //
+    //   Velocity.RunSequence([
+    //     { e: input, p: { backgroundColor: "#e2f2e2" }, o: { duration: 200 } },
+    //     { e: input, p: { backgroundColor: "#fff" }, o: { duration: 100 } }
+    //   ]);
+    //
+    //   this._updated = false;
+    // }
+    //
+    // if ((nextProps.tag.name !== this.props.tag.name)) {
+    //   this._updated = true;
+    // }
   }
 
   get tag() {

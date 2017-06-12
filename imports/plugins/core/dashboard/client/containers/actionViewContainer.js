@@ -3,7 +3,7 @@ import { StyleRoot } from "radium";
 import { composeWithTracker } from "/lib/api/compose";
 import { Reaction } from "/client/api";
 import { TranslationProvider, AdminContextProvider } from "/imports/plugins/core/ui/client/providers";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 
 
 function handleActionViewBack() {

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Button, Card, CardHeader, CardBody, CardGroup, TextField, Select } from "/imports/plugins/core/ui/client/components";
+import { Button, Card, CardHeader, CardBody, CardGroup, TextField, Select } from "/imports/plugins/core/ui/components";
 
 class SmsSettings extends Component {
   constructor(props) {

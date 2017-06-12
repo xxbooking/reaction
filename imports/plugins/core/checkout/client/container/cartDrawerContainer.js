@@ -4,7 +4,7 @@ import { Meteor } from "meteor/meteor";
 import { Cart, Media } from "/lib/collections";
 import { Reaction } from "/client/api";
 import { composeWithTracker } from "/lib/api/compose";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import CartDrawer from "../components/cartDrawer";
 
 class CartDrawerContainer extends Component {

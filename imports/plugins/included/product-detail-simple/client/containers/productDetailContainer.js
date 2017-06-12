@@ -6,7 +6,7 @@ import { Meteor } from "meteor/meteor";
 import { ReactionProduct } from "/lib/api";
 import { Reaction, i18next, Logger } from "/client/api";
 import { Tags, Media, Cart } from "/lib/collections";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 import { ProductDetail, ProductNotFound } from "../components";
 import { SocialContainer, VariantListContainer } from "./";
 import { MediaGalleryContainer } from "/imports/plugins/core/ui/client/containers";

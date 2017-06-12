@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
-import { Currency, Translation } from "/imports/plugins/core/ui/client/components";
+import { Currency, Translation } from "/imports/plugins/core/ui/components";
 import { SortableItem } from "/imports/plugins/core/ui/client/containers";
 
 class Variant extends Component {

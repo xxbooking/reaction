@@ -4,7 +4,7 @@ import { AutoForm } from "meteor/aldeed:autoform";
 import { Shipping } from "/lib/collections";
 import { i18next } from "/client/api";
 import MeteorGriddle from "/imports/plugins/core/ui-grid/client/griddle";
-import { Loading } from "/imports/plugins/core/ui/client/components";
+import { Loading } from "/imports/plugins/core/ui/components";
 
 import "./carriers.html";
 
