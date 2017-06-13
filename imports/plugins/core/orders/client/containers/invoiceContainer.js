@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import moment from "moment";
 import { composeWithTracker } from "/lib/api/compose";
 import { Loading } from "/imports/plugins/core/ui/components";
-import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider } from "/imports/plugins/core/ui/providers";
 import Invoice from "../components/invoice.js";
 
 class InvoiceContainer extends Component {

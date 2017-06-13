@@ -10,7 +10,7 @@ import { Loading } from "/imports/plugins/core/ui/components";
 import { ProductDetail, ProductNotFound } from "../components";
 import { SocialContainer, VariantListContainer } from "./";
 import { MediaGalleryContainer } from "/imports/plugins/core/ui/client/containers";
-import { DragDropProvider, TranslationProvider } from "/imports/plugins/core/ui/client/providers";
+import { DragDropProvider, TranslationProvider } from "/imports/plugins/core/ui/providers";
 
 class ProductDetailContainer extends Component {
   constructor(props) {

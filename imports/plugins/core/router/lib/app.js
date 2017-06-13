@@ -94,7 +94,7 @@ class App extends Component {
         className={pageClassName}
         style={styles.customerApp}
       >
-        {"pppp"}
+        {this.props.children}
       </div>
     );
   }

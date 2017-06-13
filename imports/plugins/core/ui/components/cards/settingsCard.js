@@ -5,7 +5,7 @@
 
 import React, { Component, PropTypes } from "react";
 import Blaze from "meteor/gadicc:blaze-react-component";
-import { Reaction } from "/client/api";
+import { Reaction } from "@reactioncommerce/reaction-core";
 import { composeWithTracker } from "/lib/api/compose";
 import { Card, CardHeader, CardBody } from "/imports/plugins/core/ui/components";
 

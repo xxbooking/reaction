@@ -3,7 +3,7 @@ import { composeWithTracker } from "/lib/api/compose";
 import PublishControls from "../components/publishControls";
 import { Revisions } from "/lib/collections";
 import { Meteor } from "meteor/meteor";
-import TranslationProvider from "/imports/plugins/core/ui/client/providers/translationProvider";
+import TranslationProvider from "/imports/plugins/core/ui/providers/translationProvider";
 import { isRevisionControlEnabled } from "../../lib/api";
 import { Reaction, i18next } from "/client/api";
 

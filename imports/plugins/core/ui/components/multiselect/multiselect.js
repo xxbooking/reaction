@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import Select from "react-select";
 import { Translation } from "../translation";
-import { i18next } from "/client/api";
+import { i18next } from "@reactioncommerce/reaction-i18n";
 
 class MultiSelect extends Component {
   static defaultProps = {

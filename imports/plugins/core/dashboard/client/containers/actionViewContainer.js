@@ -2,7 +2,7 @@ import React from "react";
 import { StyleRoot } from "radium";
 import { composeWithTracker } from "/lib/api/compose";
 import { Reaction } from "/client/api";
-import { TranslationProvider, AdminContextProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider, AdminContextProvider } from "/imports/plugins/core/ui/providers";
 import { Loading } from "/imports/plugins/core/ui/components";
 
 

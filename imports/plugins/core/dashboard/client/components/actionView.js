@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
-import { Admin } from "/imports/plugins/core/ui/client/providers";
+import { Admin } from "/imports/plugins/core/ui/providers";
 import Radium from "radium";
 import "velocity-animate";
 import "velocity-animate/velocity.ui";

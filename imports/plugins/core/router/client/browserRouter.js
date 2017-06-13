@@ -11,7 +11,7 @@ import { Tracker } from "meteor/tracker";
 import App from "/imports/plugins/core/router/client/app";
 import { Router } from "../lib";
 import { MetaData } from "/lib/api/router/metadata";
-import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider } from "/imports/plugins/core/ui/providers";
 
 const history = Router.history;
 

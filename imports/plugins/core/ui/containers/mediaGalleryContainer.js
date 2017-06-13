@@ -3,7 +3,7 @@ import Measure from "react-measure";
 import update from "react/lib/update";
 import { composeWithTracker } from "/lib/api/compose";
 import { MediaGallery } from "../components";
-import { Reaction } from "/client/api";
+import { Reaction } from "@reactioncommerce/reaction-core";
 import { ReactionProduct } from "/lib/api";
 import { Media, Revisions } from "/lib/collections";
 

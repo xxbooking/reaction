@@ -8,7 +8,7 @@ import {
   Icon,
   VerticalDivider
 } from "/imports/plugins/core/ui/components";
-import { Translatable } from "/imports/plugins/core/ui/client/providers";
+import { Translatable } from "/imports/plugins/core/ui/providers";
 import { Reaction } from "/client/api";
 
 class PublishControls extends Component {

@@ -2,7 +2,7 @@ import React from "react";
 import { composeWithTracker } from "/lib/api/compose";
 import { Reaction } from "/client/api";
 import { Loading } from "/imports/plugins/core/ui/components";
-import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider } from "/imports/plugins/core/ui/providers";
 
 /**
  * handleShowPackage - Push package into action view navigation stack

@@ -3,7 +3,7 @@ import { Meteor } from "meteor/meteor";
 import { composeWithTracker } from "/lib/api/compose";
 import { Media } from "/lib/collections";
 import { Loading } from "/imports/plugins/core/ui/components";
-import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider } from "/imports/plugins/core/ui/providers";
 import LineItems from "../components/lineItems.js";
 
 class LineItemsContainer extends Component {

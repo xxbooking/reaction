@@ -2,7 +2,7 @@ import i18next from "i18next";
 import { Meteor } from "meteor/meteor";
 import { Tracker } from "meteor/tracker";
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
-import { Reaction } from "@reactioncommerce/reaction-core";
+import { Reaction, Subscriptions } from "@reactioncommerce/reaction-core";
 import { Shops, Packages } from "/lib/collections";
 
 //
@@ -87,54 +87,56 @@ export const packageNamespaces = [];
 
 Meteor.startup(() => {
   Tracker.autorun(function (c) {
-    // setting local and active packageNamespaces
-    // packageNamespaces are used to determine i18n namespace
-    if (Reaction.Subscriptions.Shops.ready()) {
-      // every package gets a namespace, fetch them and export
-      const packages = Packages.find({}, {
-        fields: {
-          name: 1
+    if (Meteor.isClient) {
+      // setting local and active packageNamespaces
+      // packageNamespaces are used to determine i18n namespace
+      if (Subscriptions.Shops.ready()) {
+        // every package gets a namespace, fetch them and export
+        const packages = Packages.find({}, {
+          fields: {
+            name: 1
+          }
+        }).fetch();
+        for (const pkg of packages) {
+          packageNamespaces.push(pkg.name);
         }
-      }).fetch();
-      for (const pkg of packages) {
-        packageNamespaces.push(pkg.name);
-      }
 
-      // use i18n detected language to getLocale info
-      Meteor.call("shop/getLocale", (error, result) => {
-        if (result) {
-          const locale = result;
-          locale.language = getBrowserLanguage();
-          moment.locale(locale.language);
-          // flag in case the locale currency isn't enabled
-          locale.currencyEnabled = locale.currency.enabled;
-          const user = Meteor.user();
-          if (user && user.profile && user.profile.currency) {
-            localStorage.setItem("currency", user.profile.currency);
-          } else {
-            const localStorageCurrency = localStorage.getItem("currency");
-            if (!localStorageCurrency) {
-              if (locale.currencyEnabled) {
-                // in case of multiple locale currencies
-                const primaryCurrency = locale.locale.currency.split(",")[0];
-                localStorage.setItem("currency", primaryCurrency);
-              } else {
-                const shop = Shops.findOne(Reaction.getShopId(), {
-                  fields: {
-                    currency: 1
-                  }
-                });
-                localStorage.setItem("currency", shop.currency);
+        // use i18n detected language to getLocale info
+        Meteor.call("shop/getLocale", (error, result) => {
+          if (result) {
+            const locale = result;
+            locale.language = getBrowserLanguage();
+            moment.locale(locale.language);
+            // flag in case the locale currency isn't enabled
+            locale.currencyEnabled = locale.currency.enabled;
+            const user = Meteor.user();
+            if (user && user.profile && user.profile.currency) {
+              localStorage.setItem("currency", user.profile.currency);
+            } else {
+              const localStorageCurrency = localStorage.getItem("currency");
+              if (!localStorageCurrency) {
+                if (locale.currencyEnabled) {
+                  // in case of multiple locale currencies
+                  const primaryCurrency = locale.locale.currency.split(",")[0];
+                  localStorage.setItem("currency", primaryCurrency);
+                } else {
+                  const shop = Shops.findOne(Reaction.getShopId(), {
+                    fields: {
+                      currency: 1
+                    }
+                  });
+                  localStorage.setItem("currency", shop.currency);
+                }
               }
             }
-          }
-          Reaction.Locale.set(locale);
-          localeDep.changed();
+            Reaction.Locale.set(locale);
+            localeDep.changed();
 
-          // Stop the tracker
-          c.stop();
-        }
-      });
+            // Stop the tracker
+            c.stop();
+          }
+        });
+      }
     }
   });
 });

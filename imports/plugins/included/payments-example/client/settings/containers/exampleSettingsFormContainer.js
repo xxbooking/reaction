@@ -3,7 +3,7 @@ import { Meteor } from "meteor/meteor";
 import { composeWithTracker } from "/lib/api/compose";
 import { Packages } from "/lib/collections";
 import { Loading } from "/imports/plugins/core/ui/components";
-import { TranslationProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider } from "/imports/plugins/core/ui/providers";
 import { Reaction, i18next } from "/client/api";
 import { ExampleSettingsForm } from "../components";
 

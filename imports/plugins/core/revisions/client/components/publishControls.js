@@ -11,7 +11,7 @@ import {
   Icon
 } from "/imports/plugins/core/ui/components";
 import SimpleDiff from "./simpleDiff";
-import { Translatable } from "/imports/plugins/core/ui/client/providers";
+import { Translatable } from "/imports/plugins/core/ui/providers";
 
 /** TMP **/
 import { Reaction } from "/client/api";

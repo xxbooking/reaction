@@ -7,7 +7,7 @@ import { getChildVariants } from "../selectors/variants";
 import { Products, Media } from "/lib/collections";
 import update from "react/lib/update";
 import { getVariantIds } from "/lib/selectors/variants";
-import { DragDropProvider } from "/imports/plugins/core/ui/client/providers";
+import { DragDropProvider } from "/imports/plugins/core/ui/providers";
 
 function variantIsSelected(variantId) {
   const current = ReactionProduct.selectedVariant();

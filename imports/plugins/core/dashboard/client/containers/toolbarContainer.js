@@ -3,7 +3,7 @@ import { Meteor } from "meteor/meteor";
 import { composeWithTracker } from "/lib/api/compose";
 import { Reaction, i18next } from "/client/api";
 import { Tags } from "/lib/collections";
-import { TranslationProvider, AdminContextProvider } from "/imports/plugins/core/ui/client/providers";
+import { TranslationProvider, AdminContextProvider } from "/imports/plugins/core/ui/providers";
 import { isRevisionControlEnabled } from "/imports/plugins/core/revisions/lib/api";
 
 const handleAddProduct = () => {

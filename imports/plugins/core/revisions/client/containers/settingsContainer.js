@@ -3,7 +3,7 @@ import { composeWithTracker } from "/lib/api/compose";
 import SettingsComponent from "../components/settings";
 import { Packages } from "/lib/collections";
 import { Meteor } from "meteor/meteor";
-import TranslationProvider from "/imports/plugins/core/ui/client/providers/translationProvider";
+import TranslationProvider from "/imports/plugins/core/ui/providers/translationProvider";
 
 
 class RevisionSettingsContainer extends Component {
