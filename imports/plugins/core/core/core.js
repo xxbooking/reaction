@@ -10,6 +10,8 @@ import { Countries } from "@reactioncommerce/reaction-collections";
 import { localeDep } from  "@reactioncommerce/reaction-i18n";
 import { Packages, Shops } from "/lib/collections";
 import { Router } from "@reactioncommerce/reaction-router";
+import Subscriptions from "./subscriptions";
+import { slugify } from "transliteration";
 
 // Global, private state object for client side
 // This is placed outside the main object to make it a private variable.
@@ -26,49 +28,54 @@ export default {
   Locale: new ReactiveVar({}),
 
   init() {
-    // keep an eye out for shop change
-    return Tracker.autorun(() => {
-      let domain;
-      let shop;
+    if (Meteor.isClient) {
+      // keep an eye out for shop change
+      return Tracker.autorun(() => {
+        if (Subscriptions.Shops.ready()) {
+          return this._initCommon();
+        }
+      });
+    }
 
-      if (this.Subscriptions.Shops.ready()) {
-        domain = Meteor.absoluteUrl().split("/")[2].split(":")[0];
-        shop = Shops.findOne({
-          domains: domain
-        });
+    return this._initCommon();
+  },
 
-        if (shop) {
-          this.shopId = shop._id;
-          this.shopName = shop.name;
-          // initialize local client Countries collection
-          if (!Countries.findOne()) {
-            createCountryCollection(shop.locales.countries);
-          }
+  _initCommon() {
+    const domain = Meteor.absoluteUrl().split("/")[2].split(":")[0];
+    const shop = Shops.findOne({
+      domains: domain
+    });
 
-          const locale = this.Locale.get() || {};
+    if (shop) {
+      this.shopId = shop._id;
+      this.shopName = shop.name;
+      // initialize local client Countries collection
+      if (!Countries.findOne()) {
+        createCountryCollection(shop.locales.countries);
+      }
 
-          // fix for https://github.com/reactioncommerce/reaction/issues/248
-          // we need to keep an eye for rates changes
-          if (typeof locale.locale === "object" &&
-            typeof locale.currency === "object" &&
-            typeof locale.locale.currency === "string") {
-            const localeCurrency = locale.locale.currency.split(",")[0];
-            if (typeof shop.currencies[localeCurrency] === "object") {
-              if (typeof shop.currencies[localeCurrency].rate === "number") {
-                locale.currency.rate = shop.currencies[localeCurrency].rate;
-                localeDep.changed();
-              }
-            }
-          }
-          // we are looking for a shopCurrency changes here
-          if (typeof locale.shopCurrency === "object") {
-            locale.shopCurrency = shop.currencies[shop.currency];
+      const locale = this.Locale.get() || {};
+
+      // fix for https://github.com/reactioncommerce/reaction/issues/248
+      // we need to keep an eye for rates changes
+      if (typeof locale.locale === "object" &&
+        typeof locale.currency === "object" &&
+        typeof locale.locale.currency === "string") {
+        const localeCurrency = locale.locale.currency.split(",")[0];
+        if (typeof shop.currencies[localeCurrency] === "object") {
+          if (typeof shop.currencies[localeCurrency].rate === "number") {
+            locale.currency.rate = shop.currencies[localeCurrency].rate;
             localeDep.changed();
           }
-          return this;
         }
       }
-    });
+      // we are looking for a shopCurrency changes here
+      if (typeof locale.shopCurrency === "object") {
+        locale.shopCurrency = shop.currencies[shop.currency];
+        localeDep.changed();
+      }
+      return this;
+    }
   },
 
   // Return global "reactionState" Reactive Dict
@@ -233,7 +240,11 @@ export default {
   },
 
   getShopName() {
-    return this.shopName;
+    return this.shopName || "reaction";
+  },
+
+  getSlug(slugString) {
+    return slugString ? slugify(slugString) : "";
   },
 
   getShopPrefix() {

@@ -1,8 +1,12 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
+import Meteor from "meteor/meteor";
+import Tracker from "meteor/tracker";
 // import { Reaction, Router } from "/client/api";
 import { composeWithTracker } from "/lib/api/compose";
 import { Loading } from "/imports/plugins/core/ui/components";
+import { Reaction } from "@reactioncommerce/reaction-core";
+import Router from "./router";
 // import ToolbarContainer from "/imports/plugins/core/dashboard/containers/toolbarContainer";
 // import Toolbar from "/imports/plugins/core/dashboard/components/toolbar";
 // import { ActionViewContainer, PackageListContainer } from "/imports/plugins/core/dashboard/client/containers";
@@ -45,6 +49,10 @@ class App extends Component {
 
   get isAdminApp() {
     return this.props.hasDashboardAccess;
+  }
+
+  componentDidMount() {
+    console.log(this.props);
   }
 
   // renderAdminApp() {
@@ -101,10 +109,20 @@ class App extends Component {
 }
 
 function composer(props, onData) {
+  if (Router.ready()) {
+    onData(null, {
+      children: Router.reactComponents,
+      // isActionViewOpen: Reaction.isActionViewOpen(),
+      // hasDashboardAccess: Reaction.hasDashboardAccess(),
+      currentRoute: Router.current()
+    });
+  }
+
+
   onData(null, {
     // isActionViewOpen: Reaction.isActionViewOpen(),
     // hasDashboardAccess: Reaction.hasDashboardAccess(),
-    // currentRoute: Router.current()
+    currentRoute: Router.current()
   });
 }
 

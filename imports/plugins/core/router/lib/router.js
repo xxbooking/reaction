@@ -7,6 +7,8 @@ import queryParse from "query-parse";
 import Immutable from "immutable";
 import { uniqBy } from "lodash";
 import { Meteor } from "meteor/meteor";
+// import { Session } from "meteor/session";
+import { ReactiveDict } from "meteor/reactive-dict";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Tracker } from "meteor/tracker";
 import { Packages, Shops } from "/lib/collections";
@@ -14,6 +16,13 @@ import { getComponent } from "/imports/plugins/core/layout/lib/components";
 import BlazeLayout from "/imports/plugins/core/layout/lib/blazeLayout";
 import Hooks from "./hooks";
 
+let Session;
+
+if (Meteor.isServer) {
+  Session = new ReactiveDict();
+} else {
+  Session = require("meteor/session").Session;
+}
 
 export let history;
 
@@ -163,9 +172,7 @@ Router.go = (path, params, query) => {
     });
   }
 
-  if (window) {
-    history.push(actualPath);
-  }
+  history.push(actualPath);
 };
 
 Router.replace = (path, params, query) => {
@@ -176,17 +183,13 @@ Router.replace = (path, params, query) => {
     }
   });
 
-  if (window) {
-    history.replace(actualPath);
-  }
+  history.replace(actualPath);
 };
 
 Router.reload = () => {
   const current = Router.current();
 
-  if (window) {
-    history.replace(current.route.fullPath || "/");
-  }
+  history.replace(current.route.fullPath || "/");
 };
 
 /**
@@ -385,20 +388,55 @@ export function ReactionLayout(options = {}) {
  * @returns {undefined} returns undefined
  */
 Router.initPackageRoutes = (options) => {
+  // Router.Reaction = options.reactionContext;
+  // Router.routes = [];
+  //
+  // const pkgs = Packages.find().fetch();
+  // const prefix = Router.Reaction.getShopPrefix();
+  // const routeDefinitions = [];
+
+
+  if (Meteor.isClient) {
+    // prefixing isnt necessary if we only have one shop
+    // but we need to bypass the current
+    // subscription to determine this.
+    const shopSub = Meteor.subscribe("shopsCount");
+    if (shopSub.ready()) {
+      Router._initPackageRoutes(options);
+    }
+  } else {
+    Router._initPackageRoutes(options);
+  }
+};
+
+/**
+ * initPackageRoutes
+ * registers route and template when registry item has
+ * registryItem.route && registryItem.template
+ * @param {Object} options - options and context for route creation
+ * @returns {undefined} returns undefined
+ */
+Router._initPackageRoutes = (options) => {
   Router.Reaction = options.reactionContext;
   Router.routes = [];
-
+// console.log("**************************** INIT PACKAGE ROUTES ***********************************");
   const pkgs = Packages.find().fetch();
   const prefix = Router.Reaction.getShopPrefix();
   const routeDefinitions = [];
-
+// console.log(pkgs, prefix);
   // prefixing isnt necessary if we only have one shop
   // but we need to bypass the current
   // subscription to determine this.
-  const shopSub = Meteor.subscribe("shopsCount");
-  if (shopSub.ready()) {
+  // const shopSub = Meteor.subscribe("shopsCount");
+  // if (shopSub.ready()) {
     // using tmeasday:publish-counts
-    const shopCount = Counts.get("shops-count");
+    let shopCount = 1;
+
+    if (Meteor.isClient) {
+      shopCount = Counts.get("shops-count");
+    } else {
+      shopCount = Shops.find({}).count();
+    }
 
     // Default layouts
     const indexLayout = ReactionLayout(options.indexRoute);
@@ -518,7 +556,7 @@ Router.initPackageRoutes = (options) => {
     Router._routes = uniqRoutes;
 
     routerReadyDependency.changed();
-  }
+  // }
 };
 
 

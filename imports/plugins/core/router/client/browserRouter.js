@@ -8,7 +8,7 @@ import { isEqual } from "lodash";
 import queryParse from "query-parse";
 import { Session } from "meteor/session";
 import { Tracker } from "meteor/tracker";
-import App from "/imports/plugins/core/router/client/app";
+import App from "/imports/plugins/core/router/lib/app";
 import { Router } from "../lib";
 import { MetaData } from "/lib/api/router/metadata";
 import { TranslationProvider } from "/imports/plugins/core/ui/providers";
