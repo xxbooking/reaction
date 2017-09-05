@@ -1,0 +1,4 @@
+[submodule "proshopia-theme"]
+	path = imports/plugins/custom/proshopia-theme
+	url = https://github.com/xxbooking/proshopia-theme.git
+  branch = master
