@@ -115,8 +115,7 @@
     "twilio": "^3.5.0",
     "url": "^0.11.0",
     "velocity-animate": "^1.5.0",
-    "velocity-react": "^1.3.3",
-    "proshopia-taxes" : "github:patmir/proshopia-taxes"
+    "velocity-react": "^1.3.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
