@@ -116,7 +116,7 @@
     "url": "^0.11.0",
     "velocity-animate": "^1.5.0",
     "velocity-react": "^1.3.3",
-    "simple-product-importer" : "github:patmir/simple_product_import"
+    "proshopia-taxes" : "github:patmir/proshopia-taxes"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
