@@ -4,7 +4,6 @@ import { check, Match } from "meteor/check";
 import { Roles } from "meteor/alanning:roles";
 import { Random } from "meteor/random";
 import * as Collections from "/lib/collections";
-import { ShippingMethod } from "/lib/collections/schemas";
 import { Logger, Reaction } from "/server/api";
 
 /**
@@ -546,7 +545,7 @@ Meteor.methods({
    */
   "cart/setShipmentMethod": function (cartId, method) {
     check(cartId, String);
-    check(method, ShippingMethod);
+    check(method, Object);
     // get current cart
     const cart = Collections.Cart.findOne({
       _id: cartId,
@@ -921,7 +920,7 @@ Meteor.methods({
 
     const cartShipping = cart.getShippingTotal();
     const cartSubTotal = cart.getSubTotal();
-    const cartSubTotalByShop = cart.getSubTotalByShop();
+    const cartSubtotalByShop = cart.getSubtotalByShop();
     const cartTaxes = cart.getTaxTotal();
     const cartTaxesByShop = cart.getTaxesByShop();
     const cartDiscounts = cart.getDiscounts();
@@ -947,7 +946,7 @@ Meteor.methods({
         const shopId = paymentMethod.shopId;
         const invoice = {
           shipping: parseFloat(cartShipping),
-          subtotal: parseFloat(cartSubTotalByShop[shopId]),
+          subtotal: parseFloat(cartSubtotalByShop[shopId]),
           taxes: parseFloat(cartTaxesByShop[shopId]),
           discounts: parseFloat(cartDiscounts),
           total: parseFloat(cartTotalByShop[shopId])
